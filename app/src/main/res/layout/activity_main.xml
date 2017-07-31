@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:paddingBottom="25dp"
+            android:paddingTop="22dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="请输入优惠码："
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:id="@+id/input_frends_code_ll"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="13dp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/btn_use_coupon_code"
+                android:layout_width="100dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/gen_btn_bg"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/ll"
+        android:layout_centerHorizontal="true"
+        android:background="#D9D9D9"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/btn_keyboard_key"
+        android:keyTextColor="#000"
+        android:keyTextSize="16sp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:shadowColor="#fff"
+        android:visibility="gone" />
+
+</LinearLayout>
+
+

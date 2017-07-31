@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/KeyboardDemo.iml" filepath="$PROJECT_DIR$/KeyboardDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShareSDK/ShareSDK.iml" filepath="$PROJECT_DIR$/ShareSDK/ShareSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collapsingtoolbarlayoutdemo/collapsingtoolbarlayoutdemo.iml" filepath="$PROJECT_DIR$/collapsingtoolbarlayoutdemo/collapsingtoolbarlayoutdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/keyboardDemo/keyboarddemo.iml" filepath="$PROJECT_DIR$/keyboardDemo/keyboarddemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lrecyclerviewdemo/lrecyclerviewdemo.iml" filepath="$PROJECT_DIR$/lrecyclerviewdemo/lrecyclerviewdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvp/mvp.iml" filepath="$PROJECT_DIR$/mvp/mvp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myview/myview.iml" filepath="$PROJECT_DIR$/myview/myview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qqzdemo/qqzdemo.iml" filepath="$PROJECT_DIR$/qqzdemo/qqzdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxjava/rxjava.iml" filepath="$PROJECT_DIR$/rxjava/rxjava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrooldeletedemo/scrooldeletedemo.iml" filepath="$PROJECT_DIR$/scrooldeletedemo/scrooldeletedemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+    </modules>
+  </component>
+</project>
