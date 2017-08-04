@@ -5,11 +5,9 @@
 
 下面是做出的效果图：
 
-  ![image](https://github.com/Ouyinxiang/KeyboardDemo/blob/master/app/src/main/res/drawable-xhdpi/rendering1.jpg)
-
-  ![image](https://github.com/Ouyinxiang/KeyboardDemo/blob/master/app/src/main/res/drawable-xhdpi/rendering2.jpg)
+  ![image](https://github.com/Ouyinxiang/KeyboardDemo/blob/master/app/src/main/res/drawable-xhdpi/rendering1.jpg)  ![image](https://github.com/Ouyinxiang/KeyboardDemo/blob/master/app/src/main/res/drawable-xhdpi/rendering2.jpg)
 
   ![image](https://github.com/Ouyinxiang/KeyboardDemo/blob/master/app/src/main/res/drawable-xhdpi/rendering3.jpg)
 
 
-希望能有需要的各位，如有不正确的地方请指点，谢谢！
+希望能帮助有需要的各位，如有不正确的地方请指点，谢谢！
