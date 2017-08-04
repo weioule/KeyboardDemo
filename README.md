@@ -5,7 +5,7 @@
 
 下面是做出的效果图：
 
-  ![image](https://github.com/Ouyinxiang/KeyboardDemo/blob/master/app/src/main/res/drawable-xhdpi/rendering1.jpg)  word-spacing ![image](https://github.com/Ouyinxiang/KeyboardDemo/blob/master/app/src/main/res/drawable-xhdpi/rendering2.jpg)
+  ![image](https://github.com/Ouyinxiang/KeyboardDemo/blob/master/app/src/main/res/drawable-xhdpi/rendering1.jpg)  '&nbsp' ![image](https://github.com/Ouyinxiang/KeyboardDemo/blob/master/app/src/main/res/drawable-xhdpi/rendering2.jpg)
 
   ![image](https://github.com/Ouyinxiang/KeyboardDemo/blob/master/app/src/main/res/drawable-xhdpi/rendering3.jpg)
 
