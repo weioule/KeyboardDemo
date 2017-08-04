@@ -3,6 +3,7 @@ package com.example.keyboarddemo.util;
 import android.content.Context;
 
 /**
+ * 像素转换工具类
  * Created by wol on 2017/7/27.
  */
 

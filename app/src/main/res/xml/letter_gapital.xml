@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Keyboard android:keyWidth="11%p" android:keyHeight="8%"
+<Keyboard android:keyWidth="11%p" android:keyHeight="7%"
 	android:horizontalGap="0px" android:verticalGap="0.0px"
 	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	//keyWidth：宽比例
+	//codes: ascll码值
+	//keyLabel: 对应的字符
+	//horizontalGap：左间距
+	//keyEdgeFlags：相对位置
 
 	<Row android:verticalGap="1%p">
 		<Key android:codes="49" android:keyLabel="1"

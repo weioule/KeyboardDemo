@@ -13,7 +13,6 @@ import com.example.keyboarddemo.R;
 
 public class KeyboardUtil {
 
-
     /**
      * 数字与小写字母键盘
      */
@@ -21,11 +20,11 @@ public class KeyboardUtil {
     /**
      * 数字与大写字母键盘
      */
+    private Keyboard keyboarGapital;
 
     private int index;
     private int childCount;
     private boolean isChange = true;
-    private Keyboard keyboarGapital;
     private KeyboardView mKeyboardView;
     private TextChangeListener textChangeListener;
 
@@ -156,12 +155,12 @@ public class KeyboardUtil {
         animator.start();
     }
 
-    public void setOnTextChangeListener(TextChangeListener textChangeListener) {
-        this.textChangeListener = textChangeListener;
-    }
-
     public void setIndex(int index) {
         this.index = index;
+    }
+
+    public void setOnTextChangeListener(TextChangeListener textChangeListener) {
+        this.textChangeListener = textChangeListener;
     }
 
     public interface TextChangeListener {

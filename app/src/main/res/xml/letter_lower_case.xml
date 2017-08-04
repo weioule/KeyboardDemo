@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<Keyboard android:keyWidth="11%p" android:keyHeight="8%"
+	<Keyboard android:keyWidth="11%p" android:keyHeight="7%"
 		android:horizontalGap="0px" android:verticalGap="0.0px"
 		xmlns:android="http://schemas.android.com/apk/res/android">
 

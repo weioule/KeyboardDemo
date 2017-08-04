@@ -1,10 +1,8 @@
 package com.example.keyboarddemo;
 
-import android.inputmethodservice.KeyboardView;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,12 +13,11 @@ import com.example.keyboarddemo.util.KeyboardUtil;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, KeyboardUtil.TextChangeListener {
 
+    private long clickTime = 0;
     private int childCount = 6;
     private LinearLayout inputLl;
     private String couponCode = "";
     private KeyboardUtil keyboardUtil;
-    private KeyboardView keyboardView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +25,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         inputLl = (LinearLayout) findViewById(R.id.input_frends_code_ll);
-        keyboardView = (KeyboardView) findViewById(R.id.keyboard_view);
         findViewById(R.id.btn_use_coupon_code).setOnClickListener(this);
         addView();
 
     }
 
     private void addView() {
+        //添加输入框
         for (int i = 0; i < childCount; i++) {
             TextView tv = new TextView(this);
-            tv.setBackgroundResource(R.drawable.input_frends_code_et_bg);
+            tv.setBackgroundResource(R.drawable.shape_et_code_bg);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(DensityUtil.dip2px(this, 37), LinearLayout.LayoutParams.MATCH_PARENT);
             if (i < childCount - 1) {
                 layoutParams.rightMargin = DensityUtil.dip2px(this, 5);
@@ -69,10 +66,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initKeyboard() {
         if (keyboardUtil == null) {
+            //初始化Keyboard
             keyboardUtil = new KeyboardUtil(this, childCount);
             keyboardUtil.showKeyboard();
             keyboardUtil.setOnTextChangeListener(this);
         } else {
+            //显示软键盘
             if (!keyboardUtil.isShow()) {
                 keyboardUtil.showKeyboard();
             }
@@ -80,31 +79,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-
     private void showCode() {
-        if (keyboardUtil.isShow())
+        //隐藏软键盘
+        if (keyboardUtil != null && keyboardUtil.isShow())
             keyboardUtil.hideKeyboard();
 
-        Toast.makeText(this.getApplicationContext(), couponCode, Toast.LENGTH_SHORT).show();
-        inputLl.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                clearEt();
-            }
-        }, 1000);
-        return;
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (keyboardUtil.isShow()) {
-                keyboardUtil.hideKeyboard();
-            } else {
-                finish();
-            }
+        //demo显示
+        if (!"".equals(couponCode)) {
+            Toast.makeText(this.getApplicationContext(), couponCode, Toast.LENGTH_SHORT).show();
+            clearEt();
         }
-        return false;
     }
 
     @Override
@@ -115,8 +99,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void delText(int index) {
-        ((TextView) inputLl.getChildAt(index)).setText("");
         String friendCode = "";
+        ((TextView) inputLl.getChildAt(index)).setText("");
         for (int i = 0; i < couponCode.length() - 1; i++) {
             if (i < index) {
                 friendCode += couponCode.charAt(i);
@@ -138,8 +122,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 couponCode = "";
             }
-        }, 500);
+        }, 1000);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        if (keyboardUtil != null && keyboardUtil.isShow()) {
+            keyboardUtil.hideKeyboard();
+        } else {
+            exit();
+        }
+    }
+
+    private void exit() {
+        if ((System.currentTimeMillis() - clickTime) > 2000) {
+            Toast.makeText(getApplicationContext(), "再次点击退出", Toast.LENGTH_SHORT).show();
+            clickTime = System.currentTimeMillis();
+        } else {
+            this.finish();
+            System.exit(0);
+        }
+    }
+
 
 }
